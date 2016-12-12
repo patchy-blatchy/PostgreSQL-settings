@@ -1,10 +1,8 @@
 # PostgreSQL-settings
-
-Create new user with password and all permissions: 
+Create new user with all permissions and database to the PostgreSQL on mac:
 ```
-$ su - postgres 
-$ psql template1
-template1=# CREATE USER tester WITH PASSWORD 'test_password';
-template1=# GRANT ALL PRIVILEGES ON DATABASE "test_database" to tester;
-template1=# \q
+createuser -P user_name
+createdb db_name
+psql db_name
+grant all privileges on database db_name to user_name;
 ```
